@@ -1,0 +1,43 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background-color: black;
+}
+div#box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    height: 60vh;
+    background-color: #000;
+    color: aqua;
+    font-size: 40px;
+}
+div#box::before{
+    position: absolute;
+    content: '';
+    height: 60vh;
+    width: 40vw;
+    background-image: linear-gradient(45deg, rgb(32, 12, 118), rgb(143, 18, 58), rgb(206, 166, 20),
+    rgb(12, 87, 67), rgb(16, 143, 152), rgb(214, 45, 98)
+    );
+    filter: blur(20px);
+    z-index: -1;
+    animation: shine 10s linear infinite;
+}
+@keyframes shine{
+    0%{
+        background-size: 0;
+    }
+    100%{
+        background-size: 1000%;
+    }
+}

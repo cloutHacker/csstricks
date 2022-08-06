@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.typer{
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    align-items: center;
+    justify-content: center;
+}
+.typer h3 {
+    color: aqua;
+    width:0;
+    /* background-color: red; */
+    overflow: hidden;
+    letter-spacing:2px;
+    border-right: 1px solid aqua;
+    animation: typing 5s steps(10) infinite;
+}
+@keyframes typing {
+    0% {
+        width: 2px;
+    }
+    30% {
+        width: 100.89px;
+    }
+}
