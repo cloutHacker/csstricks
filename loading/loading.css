@@ -9,17 +9,17 @@ section
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background: #2860e4; */
-    /* animation: animateBg 2s linear infinite; */
+    background: #2860e4;
+    animation: animateBg 2s linear infinite;
     }
-    /* @keyframes animateBg {
+    @keyframes animateBg {
         0%{
             filter: hue-rotate(10deg);
         }
         100%{
             filter: hue-rotate(360deg);
         }
-    } */
+    }
 section .loader {
     position: relative;
     width: 50px;
