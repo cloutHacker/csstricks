@@ -16,8 +16,12 @@ body{
     justify-content: center;
     height: 20vw;
     width: 20vw;
-    background-color: rgb(22, 78, 59);
+    background-color: rgb(20, 36, 30);
     overflow: hidden;
+    z-index: 2;
+    color: aliceblue;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #button::before {
     position: absolute;
@@ -26,7 +30,8 @@ body{
     width: 90%;
     background-image:linear-gradient(aqua,green);
     animation: rotate 3s linear infinite;
-    filter: blur(10px);
+    filter: blur(19px);
+    z-index: -1;
 }
 #button::after {
     position: absolute;
@@ -34,6 +39,7 @@ body{
     height: 96%;
     width: 96%;
     background-color: inherit;
+    z-index: -1;
 }
 
 @keyframes rotate {
