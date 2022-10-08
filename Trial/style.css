@@ -1,0 +1,134 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(0,0,0);
+    box-sizing: border-box;
+}
+.container {
+    padding: 0px;
+    margin: 0px;
+
+}
+section {
+height: 300px;
+width: 300px;
+margin:10px;
+overflow:hidden;
+padding:0px;
+}
+section div.loader {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(85, 81, 81, 0.041);
+    color:aqua;
+
+}
+section div.loader:hover{
+background: rgb(31, 218, 231);
+transition-duration: 2s;
+color: black;
+}
+
+section div.loader h2 {
+    position:relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-right: 1px solid aqua;
+    animation: type 5s steps(11) infinite;
+}
+section div.loader div.typer {
+    height: auto;
+    width: auto;
+    overflow-x: hidden;
+}
+
+section span {
+    position: absolute;
+    height: 0px;
+    min-width: 300px;
+    padding: 2px;
+
+}
+section span:nth-child(1) {
+transform: rotate(180deg);
+margin-left:0px;
+animation: right 2s linear infinite;
+}
+section span:nth-child(2) {
+    transform: rotate(90deg);
+    margin-top: 150px;
+    margin-left: 150px;
+    animation: down 2s linear infinite;
+}
+section span:nth-child(3) {
+    transform: rotate(90deg);
+    margin-top: 150px;
+    /* margin-top: 150px; */
+    margin-left: -150px;
+    animation: up 2s linear infinite;
+}
+section span:nth-child(4) {
+    transform: rotate(180deg);
+    margin-top: 300px;
+    margin-left: 0px;
+    animation: left 2s linear infinite;
+}
+section div.spinners span{
+    position: absolute;
+    height: 10px;
+    min-width: 10px;
+    padding: 2px;
+
+}
+
+@keyframes right{
+0%{
+    background: linear-gradient(to left, aqua,red,yellow);
+}100%{
+    background: linear-gradient(to right,aqua,red, yellow);
+}
+}
+@keyframes left{
+0%{
+    background: linear-gradient(to left, aquamarine,goldenrod,blue);
+}100%{
+    background: linear-gradient(to right,aqua,red, yellow);
+}
+}
+@keyframes up{
+    0%{
+        background: linear-gradient(to left, cyan,green,violet);
+    }100%{
+        background: linear-gradient(to right,aqua,red, yellow);
+    }
+    }
+@keyframes down{
+0%{
+    background: linear-gradient(to left, rgb(201, 18, 131),rgb(21, 204, 218),rgb(218, 198, 23));
+}100%{
+    background: linear-gradient(to right, rgb(201, 18, 131),rgb(21, 204, 218),rgb(218, 198, 23));
+
+}
+}
+@keyframes type{
+    0%{
+        width: 0;
+    }
+    33%{
+        width: 110px;
+    }66%{
+        width: 55px;
+    }
+    100%{
+        width: 0px;
+    }
+}
