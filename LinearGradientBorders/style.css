@@ -19,9 +19,7 @@ body{
 section {
 height: 300px;
 width: 300px;
-margin:10px;
-overflow:hidden;
-padding:0px;
+
 }
 section div.loader {
     height: 100%;

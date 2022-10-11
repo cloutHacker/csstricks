@@ -38,17 +38,19 @@ section h2 {
     position: relative;
     display: block;
     width: 2vw;
-    height: 5vw;
-    background: #fff;
-    animation: animate 20s ease-in-out forwards;
+    height: calc(100vh/8);
+    background: transparent;
+    animation: animate 2s ease-in-out forwards;
+        background-position:center;
+        background-attachment:fixed;
 }
 @keyframes animate {
     0%{
-        transform: translateY(2000px);
-        background-image: url('img8.jpg');
+        transform: translateZ(2000px);
+        background-image: url('./img8.jpg');
     }
     100%{
-        transform: translateY(0px);
-        background-image: url('img8.jpg');
+        transform: translateZ(0px);
+        background-image: url('./img8.jpg');
     }
 }
