@@ -4,15 +4,20 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+:root {
+    --image:url('./image8.jpg');
+}
 body {
     background: #710c19;
+   
 }
 section{
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    transform-style: preserve-3d;
-    perspective: 500px;
+    background-attachment: fixed;
+    background-size: cover;
 }
 section h2 {
     position: relative;
@@ -33,24 +38,27 @@ section h2 {
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
+    perspective: 200px;
+    transform-style: preserve-3d;
 }
 .banner .blocks {
     position: relative;
     display: block;
-    width: 2vw;
+    width: calc(100vw/20);
     height: calc(100vh/8);
-    background: transparent;
-    animation: animate 2s ease-in-out forwards;
-        background-position:center;
-        background-attachment:fixed;
+    background-image: var(--image);
+    animation: animate 6s linear 1;
+    background-position:center;
+    background-attachment: fixed;
 }
 @keyframes animate {
     0%{
+        
         transform: translateZ(2000px);
-        background-image: url('./img8.jpg');
+        background-image: var(--image);
     }
     100%{
         transform: translateZ(0px);
-        background-image: url('./img8.jpg');
+        background-image: var(--image);
     }
 }
